@@ -1,32 +1,43 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader, TranslateCompiler } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslatePipe, TranslateDirective, TranslateParser, TranslateDefaultParser, TranslateService } from '@ngx-translate/core'
-import { MissingTranslationHandler, FakeMissingTranslationHandler } from '@ngx-translate/core'
-import { TranslateStore, USE_STORE } from '@ngx-translate/core'
 
 
 
 import { AppComponent } from './app.component';
 
-export class TranslateLowerDirective extends TranslateDirective {
-  updateValue(key: string, node: any, translations: any) {
-    key = key.toLowerCase();
-    super.updateValue(key, node, translations);
-  }
-}
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
+}
+
+export class PhraseAppCompiler extends TranslateCompiler {
+  constructor() {
+    super();
+
+  }
+  compile(value: string, lang: string): string | Function {
+    return value;
+  }
+
+  compileTranslations(translations: any, lang: string): any {
+    let prefix = "{{__"
+    let suffix = "__}}"
+    let phraseTranslations : any = {} ;
+
+    Object.keys(translations).forEach((key, value) => {
+      phraseTranslations[key] = prefix + 'phrase_' + key + suffix;
+    });
+
+    return phraseTranslations;
+  }
 }
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TranslateLowerDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -36,21 +47,14 @@ export function HttpLoaderFactory(http: HttpClient) {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
+      },
+      compiler: {
+        provide: TranslateCompiler,
+        useClass: PhraseAppCompiler
       }
-    })
+    }),
   ],
-  providers: [
-    {
-      provide: TranslateLoader,
-      useFactory: HttpLoaderFactory,
-      deps: [HttpClient]
-    },
-    { provide: TranslateParser, useClass: TranslateDefaultParser },
-    { provide: MissingTranslationHandler, useClass: FakeMissingTranslationHandler },
-    { provide: USE_STORE, useValue: false },
-    TranslateStore,
-    TranslateService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
