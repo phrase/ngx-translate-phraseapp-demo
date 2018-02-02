@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "ngx-translate-phraseapp": "phrase/ngx-translate-phraseapp",
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
