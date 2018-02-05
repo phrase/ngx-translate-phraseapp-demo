@@ -1,27 +1,23 @@
-# ngx-translate-phraseapp-demo
+# ngx-translate-phraseapp Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+This demo project shows how to integrate the [PhraseApp In-Context Editor](https://phraseapp.com/) into a Angular app using [ngx-translate](https://github.com/ngx-translate/core) for localization via the [ngx-translate-phraseapp](https://github.com/phrase/ngx-translate-phraseapp) plugin.
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    $ npm install
 
-## Code scaffolding
+## Configure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The demo project uses the project ID from the [PhraseApp demo project](http://demo.phraseapp.com/). If you want to use the [ngx-translate adapter](https://github.com/phrase/ngx-translate-phraseapp) in your own project, make sure to adjust the project ID accordingly in 'src/app/app.component.ts'.
 
-## Build
+## Run
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Start the server:
 
-## Running unit tests
+    $ npm start
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+and then open the app at: [localhost:4200](http://localhost:4200)
 
-## Running end-to-end tests
+## Support
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Questions? [Contact us](https://phraseapp.com/contact).
