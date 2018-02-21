@@ -9,6 +9,8 @@ import { initializePhraseAppEditor } from "ngx-translate-phraseapp";
 })
 export class AppComponent {
   constructor(translate: TranslateService) {
+    translate.setDefaultLang('en');
+
     let config = {
       projectId: '<YOUR_PROJECT_ID>',
       phraseEnabled: true,
