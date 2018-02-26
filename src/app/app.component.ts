@@ -13,9 +13,9 @@ export class AppComponent {
 
     let config = {
       projectId: '<YOUR_PROJECT_ID>',
-      phraseEnabled: true,
-      phraseDecoratorPrefix: "{{__",
-      phraseDecoratorSuffix: "__}}",
+      phraseEnabled: false,
+      prefix: "{{__",
+      suffix: "__}}",
       fullReparse: true
     };
 
