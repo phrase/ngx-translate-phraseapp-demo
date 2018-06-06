@@ -13,7 +13,7 @@ export class AppComponent {
 
     let config = {
       projectId: '<YOUR_PROJECT_ID>',
-      phraseEnabled: false,
+      phraseEnabled: true,
       prefix: "{{__",
       suffix: "__}}",
       fullReparse: true
