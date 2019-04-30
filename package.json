@@ -1,6 +1,6 @@
 {
   "name": "ngx-translate-phraseapp-demo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "author": "PhraseApp",
   "scripts": {
@@ -28,7 +28,7 @@
     "@ngx-translate/core": "^9.1.1",
     "@ngx-translate/http-loader": "^2.0.1",
     "core-js": "^2.4.1",
-    "ngx-translate-phraseapp": "^0.1.6",
+    "ngx-translate-phraseapp": "^0.3.0",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
