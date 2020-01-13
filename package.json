@@ -28,6 +28,8 @@
     "@ngx-translate/core": "^9.1.1",
     "@ngx-translate/http-loader": "^2.0.1",
     "core-js": "^2.4.1",
+    "highcharts": "^8.0.0",
+    "highcharts-angular": "^2.4.0",
     "ngx-translate-phraseapp": "^0.3.0",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"

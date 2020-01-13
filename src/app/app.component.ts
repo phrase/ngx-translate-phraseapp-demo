@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { initializePhraseAppEditor } from "ngx-translate-phraseapp";
+import * as Highcharts from 'highcharts';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +8,29 @@ import { initializePhraseAppEditor } from "ngx-translate-phraseapp";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  Highcharts: typeof Highcharts;
+  chartOptions: Highcharts.Options;
+  updateFlag: boolean;
+
   constructor(translate: TranslateService) {
     translate.setDefaultLang('en');
 
-    let config = {
-      projectId: '<YOUR_PROJECT_ID>',
-      phraseEnabled: true,
-      prefix: "{{__",
-      suffix: "__}}",
-      fullReparse: true
+    this.Highcharts = Highcharts;
+    this.chartOptions = {
+      series: [{
+        data: [1, 2, 3],
+        type: 'line'
+      }],
+      title: {
+        text: ''
+      }
     };
 
-    initializePhraseAppEditor(config);
+    translate.get("sometest").subscribe((res) => {
+      this.chartOptions.title.text = res;
+      this.updateFlag = true;
+    })
   }
 }
+
+
