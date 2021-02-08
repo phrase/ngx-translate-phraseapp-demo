@@ -12,7 +12,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
-
 @NgModule({
   declarations: [
     AppComponent
@@ -29,7 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       compiler: {
         provide: TranslateCompiler,
         useClass: PhraseAppCompiler
-      }
+      },
     }),
   ],
   providers: [],
