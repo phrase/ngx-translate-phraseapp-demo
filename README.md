@@ -18,6 +18,6 @@ Start the server:
 
 and then open the app at: [localhost:4200](http://localhost:4200)
 
-## Support
+## Get help / support
 
-Questions? [Contact us](https://phrase.com/contact).
+Please contact [support@phrase.com](mailto:support@phrase.com?subject=[GitHub]%20) and we can take more direct action toward finding a solution.
