@@ -1,6 +1,10 @@
-# ngx-translate-phraseapp Demo
+# ngx-translate-phraseapp Demo (DEPRECATED)
+
+![maintenance-status](https://img.shields.io/badge/maintenance-deprecated-red.svg)
 
 :no_entry: **This example repository is no longer maintained. You can find examples for [ngx-translate-phraseapp here](https://github.com/phrase/ngx-translate-phraseapp/tree/master/examples).**
+
+<hr />
 
 This demo project shows how to integrate the [Phrase In-Context Editor](https://phrase.com/) into a Angular app using [ngx-translate](https://github.com/ngx-translate/core) for localization via the [ngx-translate-phraseapp](https://github.com/phrase/ngx-translate-phraseapp) plugin.
 
